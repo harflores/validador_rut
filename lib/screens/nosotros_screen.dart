@@ -27,8 +27,10 @@ class AboutScreen extends StatelessWidget {
               style: TextStyle(fontSize: 8),
             ),
             Divider(),
+            Text('https://www.linkedin.com/in/harflores/'),
+            Divider(),
             Text(
-              'Esta APP utiliza conexion a: \n https://api.libreapi.cl/  \n \n Utilizando los packages : \n \n get: ^4.6.5 \n flutter_easyloading: ^3.0.5 \n  dio: ^5.1.2',
+              'Esta APP utiliza conexion a: \n https://api.libreapi.cl/  \n \n Utilizando los packages : \n \n get: ^4.6.5 \n flutter_easyloading: ^3.0.5 \n  dio: ^5.1.2 \n flutter_launcher_icons: ^0.13.1',
               textAlign: TextAlign.right,
             ),
           ],

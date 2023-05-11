@@ -12,4 +12,5 @@ Consumo de API https://libreapi.cl/
 - dio: ^5.1.2
 - flutter_easyloading: ^3.0.5
 - get: ^4.6.5
+- flutter_launcher_icons: ^0.13.1
 
