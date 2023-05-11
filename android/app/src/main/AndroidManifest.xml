@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.validador_rut">
+    package="cl.harfchile.validador_rut">
    <application
-        android:label="validador_rut"
+        android:label="ValidaRut"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
