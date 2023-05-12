@@ -7,12 +7,13 @@ class Controller extends GetxController {
   TextEditingController rutcontroller = TextEditingController();
   String baseUrl = 'https://api.libreapi.cl/rut/validate';
 
-  getResponse() {
+  getResponse() async {
     Map<String, dynamic> queryParemeters = {
       'rut': rutcontroller.text,
     };
-    ApiGlobal().getHttp(baseUrl, queryParemeters).catchError((error) async {
-      print(error);
+
+    await ApiGlobal().getHttp(baseUrl, queryParemeters).catchError((error) async {
+      // print(error);
       if (error.response.statusCode == 400) {
         EasyLoading.showError('El rut entregado no es valido', duration: const Duration(seconds: 1));
       } else if (error.response == null) {

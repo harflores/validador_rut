@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:validador_rut/screens/about_me_screen.dart';
 import 'package:validador_rut/screens/home_screen.dart';
-import 'package:validador_rut/screens/nosotros_screen.dart';
 
 void main() {
   runApp(const MyApp());

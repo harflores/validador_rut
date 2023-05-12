@@ -1,4 +1,6 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:validador_rut/controllers/controller.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -59,6 +61,16 @@ class HomeScreen extends StatelessWidget {
                     style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.indigo), minimumSize: MaterialStatePropertyAll(Size(200, 50))),
                     onPressed: () async {
                       if (formKey.currentState!.validate()) {
+                        final connectivityResult = await (Connectivity().checkConnectivity());
+                        if (connectivityResult == ConnectivityResult.mobile) {
+                          controller.getResponse();
+                          FocusManager.instance.primaryFocus!.unfocus();
+                        } else if (connectivityResult == ConnectivityResult.wifi) {
+                          controller.getResponse();
+                          FocusManager.instance.primaryFocus!.unfocus();
+                        } else {
+                          EasyLoading.showInfo('Sin Conexión a Internet');
+                        }
                         controller.getResponse();
                         FocusManager.instance.primaryFocus!.unfocus();
                       }
